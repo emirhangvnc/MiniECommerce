@@ -1,0 +1,74 @@
+﻿@model List<EntityLayer.Product>
+@{
+    ViewData["Title"] = "ProductList";
+}
+
+<h1>Ürün Listesi</h1>
+
+<div class="product-container">
+    @foreach (var product in Model)
+    {
+        <div class="product-card">
+            <img src="~/default.png" alt="@product.ProductName">
+            <h3>@product.ProductName</h3>
+            <div class="product-price-container">
+                <div class="product-price-name">Liste Fiyatı: </div>
+                <p class="product-List-price">@product.ListPrice TL</p>
+            </div>
+            <div class="product-price-container">
+                <div class="product-price-name">Ürün Fiyat: </div>
+                <p class="product-price">@product.Price TL</p>
+            </div>
+        </div>
+    }
+</div>
+
+
+<style>
+    .product-price-container {
+        display: contents;
+    }
+    .product-price-name{
+        margin-top: 5px;
+        font-weight: bold;
+    }
+    
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+    .product-card {
+        width: calc(25% - 30px); /* Her sırada 4 ürün kartı göstermek için genişlik ayarı */
+        margin: 0px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-card h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .product-card .product-price {
+            margin-top: 5px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .product-card .product-List-price {
+            margin-top: 5px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+</style>

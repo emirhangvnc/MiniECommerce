@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - E-Ticaret Sitesi</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/footer.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="categories">
+            <a href="#">Erkek</a>
+            <a href="#">Kadın</a>
+        </div>
+        <div class="logo">
+            <a href="/">E-Ticaret Sitesi</a>
+        </div>
+        <div class="user-cart-search">
+            <form class="searcbar">
+                <input type="text" placeholder="Ürün Ara...">
+                <button type="submit">Ara</button>
+            </form>
+            <a href="#">Üye Girişi</a>
+            <a href="#">Sepet</a>
+        </div>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        @Html.Partial("~/Views/Shared/Footer.cshtml")
+    </footer>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

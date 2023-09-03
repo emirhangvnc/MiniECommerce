@@ -1,0 +1,13 @@
+﻿@model List<EntityLayer.Brand>
+@{
+    ViewData["Title"] = "BrandList";
+}
+
+<h1>Markalar</h1>
+<br />
+<h1>@ViewBag.ListStatus</h1>
+@foreach (var item in Model)
+{
+    <div>@item.BrandName</div>
+}
+

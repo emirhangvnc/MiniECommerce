@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="slider">
+    <!-- Slider (carousel) içeriği burada olacak -->
+    <div class="carousel">
+        <div class="slide">
+            <img class="sliderImg" src="~/sliderimages/active_010923_w_1.png" alt="Slider Görsel 1" />
+        </div>
+        <div class="slide">
+            <img class="sliderImg" src="~/sliderimages/active_010923_m.png" alt="Slider Görsel 2" />
+        </div>
+    </div>
+</section>
+
+@* <a href="/Brand/Index">Marka Listesi</a> *@
+<a href="/Product/Index">Ürün Listesi</a>
+
+@* <section class="vitrin">
+    <div class="vitrin-item">
+        <!-- Vitrin 1 içeriği burada olacak -->
+        <img src="product1.jpg" alt="Ürün 1">
+        <h2>Ürün 1</h2>
+        <p>Açıklama veya fiyat burada.</p>
+        <a href="#">Detaylar</a>
+    </div>
+    <div class="vitrin-item">
+        <!-- Vitrin 2 içeriği burada olacak -->
+        <img src="product2.jpg" alt="Ürün 2">
+        <h2>Ürün 2</h2>
+        <p>Açıklama veya fiyat burada.</p>
+        <a href="#">Detaylar</a>
+    </div>
+</section> *@
+
+<style>
+    .carousel {
+        display: flex;
+    }
+
+    .sliderImg{
+        width: 100%;
+    }
+</style>
