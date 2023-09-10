@@ -3,7 +3,7 @@ using BusinessLayer.Concrete.Base;
 using CoreLayer.Results;
 using DataLayer.Abstract;
 using DataLayer.Concrete.Context;
-using EntityLayer;
+using EntityLayer.Concrete;
 using System.Collections.Generic;
 
 namespace BusinessLayer.Concrete

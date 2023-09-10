@@ -15,8 +15,24 @@ namespace BusinessLayer
             services.AddScoped<IBrandService, BrandManager>();
             services.AddScoped<IBrandDal, EfBrandDal>();
 
+            services.AddScoped<ICategoryDal, EfCategoryDal>();
+
+            services.AddScoped<IMenuDal, EfMenuDal>();
+
+            services.AddScoped<IProductAndCategoryDal, EfProductAndCategoryDal>();
+
+            services.AddScoped<IProductAndImageDal, EfProductAndImageDal>();
+
+            services.AddScoped<IProductAndSpecificationDal, EfProductAndSpecificationDal>();
+
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IProductDal, EfProductDal>();
+
+            services.AddScoped<ISpecificationDal, EfSpecificationDal>();
+
+            services.AddScoped<ISpecificationValueDal, EfSpecificationValueDal>();
+
+            services.AddScoped<ITaxDal, EfTaxDal>();
 
             services.AddScoped<ECommerceContext>();
 

@@ -1,5 +1,5 @@
 ﻿using CoreLayer.Results;
-using EntityLayer;
+using EntityLayer.Concrete;
 
 namespace BusinessLayer.Abstract
 {

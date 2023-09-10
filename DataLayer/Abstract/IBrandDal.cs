@@ -1,5 +1,5 @@
 ﻿using CoreLayer.DataAccesses.Abstract;
-using EntityLayer;
+using EntityLayer.Concrete;
 
 namespace DataLayer.Abstract
 {
