@@ -12,6 +12,7 @@ namespace EntityLayer.Concrete
         public string ProductName { get; set; }
         [StringLength(1000)]
         public string ProductDescription { get; set; }
+        public string? Url { get; set; }
         public decimal? ListPrice { get; set; }
         public decimal Price { get; set; }
         public int StockQuantity { get; set; }

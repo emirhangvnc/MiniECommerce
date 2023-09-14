@@ -628,6 +628,10 @@ ol {
 	font-weight: 600;
 }
 
+.produc__Price__container {
+	display: inline-flex;
+}
+
 .listprice {
 	color: #666 !important;
 	text-decoration: line-through;
@@ -1042,6 +1046,23 @@ ol {
 	padding-right: 5px;
 }
 
+.slider__item {
+	height: 314px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+	.slider__item.categories__large__item {
+		height: 638px;
+		padding-left: 10px;
+	}
+
 .categories__item {
 	height: 314px;
 	display: -webkit-box;
@@ -1298,10 +1319,11 @@ ol {
 	margin-right: 0;
 }
 
-.product__item__text .product__price {
-	color: #111111;
-	font-weight: 600;
-}
+	.product__item__text .product__price {
+		padding: 6px;
+		color: #111111;
+		font-weight: 600;
+	}
 
 .product__item__text .product__price span {
 	font-size: 14px;

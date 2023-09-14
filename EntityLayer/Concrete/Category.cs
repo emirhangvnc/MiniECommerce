@@ -10,6 +10,7 @@ namespace EntityLayer.Concrete
         [Required]
         [StringLength(150)]
         public string CategoryName { get; set; }
+        public string? Url { get; set; }
         public int? ParentId { get; set; }
     }
 }
