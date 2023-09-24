@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.FlowAnalysis.DataFlow;
 
 namespace MiniECommerceMVC.Controllers
 {
@@ -11,11 +12,15 @@ namespace MiniECommerceMVC.Controllers
         {
             _productService = productService;
         }
-        public IActionResult Index()
+        public IActionResult Index(string url)
         {
-            var result = _productService.GetAllProduct();
-            ViewBag.ListStatus = result.Message;
+            var result = _productService.ProducDetailByUrl(url);
+
             return View(result.Data);
+        }
+        public IActionResult Index2()
+        {
+            return View();
         }
     }
 }

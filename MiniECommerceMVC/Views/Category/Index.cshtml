@@ -1,4 +1,4 @@
-﻿@model List<EntityLayer.Concrete.Product>
+﻿@model List<EntityLayer.Dtos.ProductDto.ProductCategoryDetailsDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -109,7 +109,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
-                                    <a href="#">
+                                    <a href="/Product/Index/Index/?url=@item.Url">
                                         <div class="label new">New</div>
                                         <img src="~/img/shop/shop-1.jpg" />
                                     </a>
@@ -120,7 +120,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="@item.Url">@item.ProductName</a></h6>
+                                    <h6><a href="/Product/Index/Index/?url=@item.Url">@item.ProductName</a></h6>
                                     <div class="produc__Price__container">
                                         <div class="product__price listprice">@item.ListPrice TL</div>
                                         <div class="product__price">@item.Price TL</div>

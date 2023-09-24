@@ -11,11 +11,12 @@ namespace MiniECommerceMVC.Controllers
         {
             _productService = productService;
         }
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            var result = _productService.GetAllProduct();
+            var result = _productService.GetProductsByCategoryId(id);
             ViewBag.ListStatus = result.Message;
             return View(result.Data);
         }
+
     }
 }

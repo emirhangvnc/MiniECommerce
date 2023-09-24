@@ -3,6 +3,7 @@ using BusinessLayer.Concrete;
 using DataLayer.Abstract;
 using DataLayer.Concrete;
 using DataLayer.Concrete.Context;
+using EntityLayer.Concrete;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BusinessLayer
@@ -15,10 +16,12 @@ namespace BusinessLayer
             services.AddScoped<IBrandService, BrandManager>();
             services.AddScoped<IBrandDal, EfBrandDal>();
 
+            services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
 
             services.AddScoped<IMenuDal, EfMenuDal>();
 
+            services.AddScoped<IProductAndCategoryService, ProductAndCategoryManager>();
             services.AddScoped<IProductAndCategoryDal, EfProductAndCategoryDal>();
 
             services.AddScoped<IProductAndImageDal, EfProductAndImageDal>();
@@ -32,6 +35,7 @@ namespace BusinessLayer
 
             services.AddScoped<ISpecificationValueDal, EfSpecificationValueDal>();
 
+            services.AddScoped<ITaxService, TaxManager>();
             services.AddScoped<ITaxDal, EfTaxDal>();
 
             services.AddScoped<ECommerceContext>();

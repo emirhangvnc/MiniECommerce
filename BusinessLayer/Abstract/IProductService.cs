@@ -1,5 +1,6 @@
 ﻿using CoreLayer.Results;
 using EntityLayer.Concrete;
+using EntityLayer.Dtos.ProductDto;
 
 namespace BusinessLayer.Abstract
 {
@@ -7,5 +8,9 @@ namespace BusinessLayer.Abstract
     {
         IDataResult<List<Product>> GetAllProduct();
         IDataResult<Product> GetByProductId(int id);
+
+        IDataResult<List<ProductCategoryDetailsDto>> GetProductsByCategoryId(int categoryId);
+
+        IDataResult<ProductDetailsDto> ProducDetailByUrl(string url);
     }
 }
